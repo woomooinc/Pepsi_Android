@@ -9,6 +9,9 @@ import java.io.OutputStream;
 import java.net.Socket;
 import java.util.Arrays;
 
+import de.greenrobot.event.EventBus;
+import in.woomoo.pepsi.android.event.GameScoreEvent;
+
 /**
  * Created by Jason on 11/30/13.
  */
@@ -50,6 +53,10 @@ public class ConnectionManager implements Runnable {
                     Log.d(TAG, "Rec:" + rec);
                     if(rec.equals(MESSAGE_START))
                         handler.obtainMessage(PepsiService.MESSAGE_START,0,0).sendToTarget();
+                    else if(rec.substring(0, MESSAGE_RESULT.length()).equals(MESSAGE_RESULT)) {
+                        int count = Integer.parseInt(rec.substring(MESSAGE_START.length()+1));
+                        EventBus.getDefault().post(new GameScoreEvent(count));
+                    }
                 } catch (IOException e) {
                     Log.e(TAG, "disconnected", e);
                 }
@@ -81,4 +88,5 @@ public class ConnectionManager implements Runnable {
     }
 
     public static final String MESSAGE_START = "start";
+    public static final String MESSAGE_RESULT = "result";
 }

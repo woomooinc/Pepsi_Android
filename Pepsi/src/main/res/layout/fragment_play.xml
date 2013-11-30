@@ -3,12 +3,54 @@
     android:layout_height="match_parent"
     android:background="#000000">
 
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:padding="10dip"
+        android:textSize="72sp"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:textColor="#FF0000"
+        android:id="@+id/time"
+        android:visibility="invisible"
+        android:text="10"/>
 
 
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_centerInParent="true"
+        android:textSize="72sp"
+        android:textColor="#FFFF00"
+        android:id="@+id/shake_status"
+        android:visibility="invisible"
         android:text="start play!!!"/>
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_above="@+id/result"
+        android:id="@+id/result_icon"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:padding="10dip"
+        android:textSize="72sp"
+        android:layout_centerHorizontal="true"
+        android:layout_alignParentBottom="true"
+        android:textColor="#FF0000"
+        android:id="@+id/result"
+        android:text=""/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:textSize="72sp"
+        android:textColor="#FFFF00"
+        android:id="@+id/precount"/>
+
 
 </RelativeLayout>

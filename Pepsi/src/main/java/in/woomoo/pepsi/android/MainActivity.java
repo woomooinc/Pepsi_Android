@@ -24,6 +24,9 @@ public class MainActivity extends Activity {
             getFragmentManager().beginTransaction()
                     .add(R.id.container, new ServerListFragment())
                     .commit();
+//            getFragmentManager().beginTransaction()
+//                    .add(R.id.container, new PlayFragment())
+//                    .commit();
         }
 
         EventBus.getDefault().register(this);
