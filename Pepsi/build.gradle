@@ -17,8 +17,8 @@ android {
     buildToolsVersion "19.0.0"
 
     defaultConfig {
-        minSdkVersion 15
-        targetSdkVersion 15
+        minSdkVersion 18
+        targetSdkVersion 18
     }
     buildTypes {
         release {
@@ -34,4 +34,5 @@ android {
 }
 
 dependencies {
+    compile 'de.greenrobot:eventbus:2.2.0'
 }

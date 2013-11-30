@@ -15,16 +15,16 @@
         android:layout_height="wrap_content"
         android:layout_alignParentTop="true"
         android:layout_centerHorizontal="true"
-        android:id="@+id/button_server"
-        android:text="Server"/>
+        android:id="@+id/button_ready"
+        android:text="Ready"/>
 
     <Button
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="center"
-        android:layout_below="@+id/button_server"
+        android:layout_below="@+id/button_ready"
         android:layout_centerHorizontal="true"
-        android:id="@+id/button_client"
-        android:text="Client"/>
+        android:id="@+id/button_start"
+        android:text="Start"/>
 
 </RelativeLayout>
